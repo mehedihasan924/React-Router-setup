@@ -9,9 +9,10 @@ import {
 import About from './Component/About/About.jsx';
 import Contact from './Component/Contact/Contact.jsx';
 import Error from './Component/Error/Error.jsx';
-import Header from './Component/Header/Header.jsx';
 import Home from './Component/Home/Home.jsx';
-
+import First from './Component/First/First.jsx';
+import Frends from './Component/Frends/Frends.jsx';
+import FriendsDetails from './Component/FriendsDetail/FriendsDetails.jsx'
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
@@ -34,21 +35,31 @@ import Home from './Component/Home/Home.jsx';
 const router=createBrowserRouter([
   {
     path:'/',
-    element: <Home></Home>,
-    children:[
+    element: <Home> </Home>,
+    children:[     {
+            path: "/",
+            element:  <First />,
+          
+          },
               {
           path: "/about",
           element:  <About />,
         
         },
         {
+          path:"/frends",
+          element:<Frends></Frends>,
+          loader:()=> fetch('/public/data.json')
+        },
+        {
+          path: "friend/:friendID",
+          element:<FriendsDetails></FriendsDetails>
+        },
+        {
           path: "/contact",
           element:  <Contact />,
         },
-        {
-          path: "*",
-          element: <Error />,
-        }
+        
     ]
  } ])
 
