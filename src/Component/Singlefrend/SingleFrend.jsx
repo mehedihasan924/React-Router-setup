@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 
 const SingleFrend = ({friend}) => {
  
-    console.log(data)
-    console.log(friend)
+   
     const { email,  name, id, phone, img}=friend;
   
     return (

@@ -4,7 +4,8 @@
         "name":"Mehedi Hasan",
         "img": "/public/vite.svg",
         "email":"hasan@gmail.com",
-        "phone": "031568794135"
+        "phone": "031568794135",
+        "url" :"/public/book.pdf"
     
     },
     {
