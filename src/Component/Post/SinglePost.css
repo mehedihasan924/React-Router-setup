@@ -1,0 +1,10 @@
+.post{
+  border: 2px solid red;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.main-post-div{
+    width: 70%;
+    margin-left: 50px;
+}

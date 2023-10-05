@@ -3,15 +3,22 @@ import { useLoaderData } from 'react-router-dom';
 
 
 const FriendsDetails = () => {
- 
-  const data=useLoaderData()
- 
+
+
+    // const quiz = useLoaderData();
+    // const quizData = quiz.data.questions;
+    // console.log(quizData);
+
+    const friends=useLoaderData();
+        const friendData= friends
+      console.log(friendData)
+
     return (
         <div>
             <h1>Everything About this Person is here</h1>
-             <h2> Name:  {data.name}</h2>
-             <p> Email: {data.email}</p>
-            
+           <p> ID: {friendData.id}</p>
+           <h1> Title: {friendData.title}</h1>
+           <p> {friendData.body}</p>
         </div>
     );
 };

@@ -1,22 +1,23 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import './index.css'
-import {
+import { 
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+
 import About from './Component/About/About.jsx';
 import Contact from './Component/Contact/Contact.jsx';
-import Error from './Component/Error/Error.jsx';
 import Home from './Component/Home/Home.jsx';
 import First from './Component/First/First.jsx';
 import Frends from './Component/Frends/Frends.jsx';
 import FriendsDetails from './Component/FriendsDetail/FriendsDetails.jsx'
+import Posts from './Component/Post/Posts.jsx';
+import PostDetails from './Component/PostDetails/PostDetails';
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
-//     element:  <App />,
+//     element:  <App />
 //   },
 //   {
 //     path: "/about",
@@ -52,10 +53,23 @@ const router=createBrowserRouter([
           loader:()=> fetch('/public/data.json')
         },
         {
-          path: "friend/:friendID",
-          element:<FriendsDetails></FriendsDetails>,
-          loader :({params})=> fetch(`/public/data.json/${params.friendID}`)
-         
+          path:'/friend/:id',
+          loader:async({params})=>{
+          console.log(params.id);
+          return fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+          },
+          element:<FriendsDetails ></FriendsDetails>,
+        },
+
+        {
+          path :"/posts",
+          element:<Posts></Posts>,
+          loader:()=> fetch("https://jsonplaceholder.typicode.com/posts")
+        },
+        {
+         path:"posts/:postsID",
+         element:<PostDetails> </PostDetails>,
+        loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/posts/${params.postsID}`)
         },
         {
           path: "/contact",

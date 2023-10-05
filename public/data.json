@@ -1,16 +1,16 @@
-[
-    {
+
+ [ {
+
         "id":1,
         "name":"Mehedi Hasan",
         "img": "/public/vite.svg",
         "email":"hasan@gmail.com",
-        "phone": "031568794135",
-        "url" :"/public/book.pdf"
+        "phone": "031568794135"
     
     },
     {
         "id":2,
-        "name":"Mehedi Hasan",
+        "name":"kaled",
         "img": "/public/vite.svg",
         "email":"hasan@gmail.com",
         "phone": "031568794135"
@@ -18,7 +18,7 @@
     },
     {
         "id":4,
-        "name":"Mehedi Hasan",
+        "name":"Mehedi",
         "img": "/public/vite.svg",
         "email":"hasan@gmail.com",
         "phone": "031568794135"
@@ -26,10 +26,12 @@
     },
     {
         "id":3,
-        "name":"Mehedi Hasan",
+        "name":"Salman",
         "img": "/public/vite.svg",
         "email":"hasan@gmail.com",
         "phone": "031568794135"
     
-    }
-]
+    }]
+
+
+  

@@ -5,7 +5,8 @@ const Header = () => {
     return (
         <nav className='menu' >    
             <Link to="/"> Home </Link>
-            <Link to="/frends">Frenda </Link>
+            <Link to="/frends">Friends</Link>
+            <Link to="/posts">Posts</Link>
             <Link to="/about"> About </Link>
             <Link to="/contact">  Contact</Link>
         </nav>
