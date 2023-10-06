@@ -12,9 +12,9 @@ const FriendsDetails = () => {
         // },[])
 
         const navigate=useNavigate()
-  const goBack=()=>{
-     navigate(-1)
-  }
+        const goBack=()=>{
+            navigate(-1)
+        }
 
     const friends=useLoaderData();
         const friendData= friends
