@@ -12,6 +12,8 @@ const PostDetails = () => {
             <p> ID:{postData.id} </p>
             <h1> Title: { postData.title}</h1>
         </div>
+     
+
     );
 };
 
