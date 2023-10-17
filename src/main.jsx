@@ -14,6 +14,7 @@ import Frends from './Component/Frends/Frends.jsx';
 import FriendsDetails from './Component/FriendsDetail/FriendsDetails.jsx'
 import Posts from './Component/Post/Posts.jsx';
 import PostDetails from './Component/PostDetails/PostDetails';
+import Dataloader from './JsFile/JsFile'
 // const router = createBrowserRouter([
 //   {
 //     path: "/",
@@ -55,8 +56,10 @@ const router=createBrowserRouter([
         },
         {
           path:"friend/:id",
-          element:<FriendsDetails ></FriendsDetails>,
-          loader:({params})=> fetch(`/public/data.json/${params.id}`)
+          element:<FriendsDetails              
+          ></FriendsDetails>,
+          loader:({params})=>fetch(`/public/data.json${params.id}`)
+          // loader:Dataloader
         },
         // {
         //   path:'/friend/:id',
@@ -74,7 +77,7 @@ const router=createBrowserRouter([
         },
         {
          path:"posts/:postsID",
-         element:<PostDetails> </PostDetails>,
+         element:<PostDetails > </PostDetails>,
         loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/posts/${params.postsID}`)
         },
         {

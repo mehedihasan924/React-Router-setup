@@ -5,8 +5,10 @@ import { Link, useNavigate } from 'react-router-dom';
 
 const SingleFrend = ({friend}) => {
     const { email,  name, id, phone, img}=friend;
+
+    
    const   navigate=useNavigate()
-    const handleNavigate=()=>{
+   const handleNavigate=()=>{
         navigate(`/friend/${id}`)
     }
   

@@ -1,7 +1,12 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData ,useNavigate} from 'react-router-dom';
 
-const PostDetails = () => {
+const PostDetails = ({}) => {
+    const navigate=useNavigate()
+    const goBack=()=>{
+        navigate(-1)
+    }
+
      const postsID=useLoaderData();
           const  postData=postsID
 
@@ -11,6 +16,8 @@ const PostDetails = () => {
             <p> </p>
             <p> ID:{postData.id} </p>
             <h1> Title: { postData.title}</h1>
+
+            <button onClick={goBack}>Go Back </button>
         </div>
      
 

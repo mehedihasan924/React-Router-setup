@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SingleFrend from '../Singlefrend/SingleFrend';
+
 import './Frends.css';
 
 const Frends = () => {
@@ -23,7 +24,9 @@ const Frends = () => {
                             friend={friend}
                             >
                             </SingleFrend>)
+                          
                         }
+                       
                 </div>
            </div>
         </div>
