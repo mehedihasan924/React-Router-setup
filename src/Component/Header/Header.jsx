@@ -4,7 +4,7 @@ import './Header.css'
 import ActiveLink from '../ActiveLink/ActiveLink';
 const Header = () => {
     return (
-        <nav className='menu' >    
+        <nav className='menu'>    
             <ActiveLink to="/">Home</ActiveLink>
             <ActiveLink to="/frends">Friends</ActiveLink>
             <ActiveLink to="/posts">Posts</ActiveLink>

@@ -56,20 +56,11 @@ const router=createBrowserRouter([
         },
         {
           path:"friend/:id",
-          element:<FriendsDetails              
-          ></FriendsDetails>,
-          loader:({params})=>fetch(`/public/data.json${params.id}`)
-          // loader:Dataloader
+          element:<FriendsDetails></FriendsDetails>,
+          loader:({params})=>fetch(`https://jsonplaceholder.typicode.com/posts/${params.id}`)
+          
         },
-        // {
-        //   path:'/friend/:id',
-        //   loader:async({params})=>{
-        //   console.log(params.id);
-        //   return fetch(`/public/data.json/${params.id}`)
-        //   },
-        //   element:<FriendsDetails ></FriendsDetails>,
-        // },
-
+       
         {
           path :"/posts",
           element:<Posts></Posts>,

@@ -1,15 +1,14 @@
-import React from 'react';
+import React,{createContext} from 'react';
 import { useLoaderData } from 'react-router-dom';
 import SingleFrend from '../Singlefrend/SingleFrend';
-
 import './Frends.css';
 
+
+export const RingContext=createContext('Gold')
 const Frends = () => {
 
-
     const frends=useLoaderData();
-
-  const jsonData=frends
+     const jsonData=frends
 
     return (
         <div>
